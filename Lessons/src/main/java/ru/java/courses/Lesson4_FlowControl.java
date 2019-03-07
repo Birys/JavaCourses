@@ -17,7 +17,23 @@ public class Lesson4_FlowControl {
      * @return самую длинную строку из полученного массива
      */
     public static String task1(String[] strings) {
-        return null;
+        int i = strings.length;
+        if (i == 0){return "";}
+        else{
+      int p = 0;
+      int[] u = new int[i];
+        while (p < i) {
+          u[p]=strings[p].length();
+          p++;
+        }
+        p = 0;
+        int maxp = 0;
+        while (p < i) {
+           if(u[p]>u[maxp]){maxp = p;}
+            p++;
+        }
+
+        return strings[maxp];}
     }
 
     /**
@@ -42,4 +58,9 @@ public class Lesson4_FlowControl {
     public static int task2(int i, int k, char operation) {
        return 0;
     }
+
+    public static void main(String[] args) {
+        System.out.println(task1(new String[0]));
+    }
+
 }
