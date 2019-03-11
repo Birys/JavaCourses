@@ -21,16 +21,12 @@ public class Lesson4_FlowControl {
         if (i == 0){return "";}
         else{
       int p = 0;
+      int maxp = 0;
       int[] u = new int[i];
         while (p < i) {
           u[p]=strings[p].length();
+          if(u[p]>u[maxp]){maxp = p;}
           p++;
-        }
-        p = 0;
-        int maxp = 0;
-        while (p < i) {
-           if(u[p]>u[maxp]){maxp = p;}
-            p++;
         }
 
         return strings[maxp];}
@@ -56,8 +52,32 @@ public class Lesson4_FlowControl {
      * @return целочисленный результат выполнения операции
      */
     public static int task2(int i, int k, char operation) {
-       return 0;
+      if (operation == '+') {i=i+k;}
+      else{
+         if (operation =='-')  {i=i-k;}
+             else{
+                  if (operation == '*') {i=i*k;}
+                        else{
+                             if (operation == '%') {i=i%k;}
+                             else{
+                                 if (k == 0 | i ==0 ){ i = 0;}
+                                      else{
+                                           if (operation == '/') {i=i/k;}
+                                                else {
+                                                    i=0;
+                                                     }
+                                            }
+                                  }
+                             }
+                   }
+          }
+
+      return i;
     }
+
+
+
+
 
     public static void main(String[] args) {
         System.out.println(task1(new String[0]));
