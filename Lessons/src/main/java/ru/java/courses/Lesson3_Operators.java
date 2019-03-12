@@ -18,7 +18,14 @@ public class Lesson3_Operators {
      * - получить первые n символов из строки можно методом .substring(0, n)
      */
     public static String task1(int i, String str) {
-        if (i >= 0) {
+
+       str = (i > 0) ? str + i : (i==0 ? "0" :  i + str ) ;
+       str = ( str.length() <= 10 ? str : str.substring(0,10) ) ;
+       return str;
+
+    }
+
+      /*  if (i >= 0) {
             if (i > 0) {
                 str = str + i;
             } else {
@@ -37,7 +44,7 @@ public class Lesson3_Operators {
       {
            return str.substring(0,10);
       }
-    }
+    }*/
     /**
      * В этом методе необходимо реализовать следующий алгоритм:
      * 1. Получаем целое число
