@@ -25,7 +25,8 @@ public class Lesson4_FlowControl {
       int[] u = new int[i];
         while (p < i) {
           u[p]=strings[p].length();
-          if(u[p]>u[maxp]){maxp = p;}
+          maxp= u[p]>u[maxp] ?  p : maxp;
+        /*  if(u[p]>u[maxp]){maxp = p;}*/
           p++;
         }
 
