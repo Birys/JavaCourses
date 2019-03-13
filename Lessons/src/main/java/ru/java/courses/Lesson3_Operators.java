@@ -19,8 +19,8 @@ public class Lesson3_Operators {
      */
     public static String task1(int i, String str) {
 
-       str = (i > 0) ? str + i : (i==0 ? "0" :  i + str ) ;
-       str = ( str.length() <= 10 ? str : str.substring(0,10) ) ;
+       str = (i > 0) ? str + i : (i==0 ? "0" :  i + str ) ; //операции с строкой
+       str = ( str.length() <= 10 ? str : str.substring(0,10) ) ; // операции с выводом
        return str;
 
     }
@@ -60,19 +60,22 @@ public class Lesson3_Operators {
      */
     public static boolean task2(int i) {
         i--;
-        if ( 100< i | i <30 )
+        i= 100<i|i<30 ? i+1000 : (i%2 == 0 ? i-1000 : i);
+        return i>=0;
+         /*if ( 100< i | i <30 )
          {
             i += 1000;}
         else {if (i >0 && i%2 == 0)
         {
             i-=1000;
         }
-
-}
-        if (i>=0)
+        }
+        i= 100<i|i<30 ? i+1000 : (i>0 & i%2 == 0 ? i-1000 : i)
+        return i>=0 ? true : false;
+   /*     if (i>=0)
         {return true;}
         else
-        {return false;}
+        {return false;}*/
         }
 
     public static void main(String[] args) {
