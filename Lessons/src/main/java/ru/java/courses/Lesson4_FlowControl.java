@@ -18,19 +18,20 @@ public class Lesson4_FlowControl {
      */
     public static String task1(String[] strings) {
         int i = strings.length;
-        if (i == 0){return "";}
+        if (i == 0)
+            {return "";}
         else{
-      int p = 0;
-      int maxp = 0;
-      int[] u = new int[i];
-        while (p < i) {
-          u[p]=strings[p].length();
-          maxp= u[p]>u[maxp] ?  p : maxp;
-        /*  if(u[p]>u[maxp]){maxp = p;}*/
-          p++;
-        }
+             int p = 0;
+             int maxp = 0;
+             int[] u = new int[i];
+             while (p < i) {
+                  u[p]=strings[p].length();
+                  maxp= u[p]>u[maxp] ?  p : maxp;
+                  /*  if(u[p]>u[maxp]){maxp = p;}*/
+                  p++;
+             }
 
-        return strings[maxp];}
+         return strings[maxp];}
     }
 
     /**
@@ -53,7 +54,31 @@ public class Lesson4_FlowControl {
      * @return целочисленный результат выполнения операции
      */
     public static int task2(int i, int k, char operation) {
-      if (operation == '+') {i=i+k;}
+   switch (operation){
+       case '+':
+           i=i+k;
+           break;
+       case '*':
+           i=i*k;
+           break;
+       case '-':
+           i=i-k;
+           break;
+       case '%':
+           i=i%k;
+           break;
+       case '/':
+           if (k == 0 | i ==0 ){ i = 0;}
+           else{i=i/k;}
+           break;
+        default:
+            i=0; }
+            return i;
+
+
+
+
+        /*   if (operation == '+') {i=i+k;}
       else{
          if (operation =='-')  {i=i-k;}
              else{
@@ -73,7 +98,7 @@ public class Lesson4_FlowControl {
                    }
           }
 
-      return i;
+      return i;*/
     }
 
 
