@@ -12,6 +12,7 @@ class Lesson2 {
      */
     static int formula(int x) {
         x = (int) Math.sqrt(13*x +13/x);
+        x = 5%3;
         return  x;
     }
 
@@ -42,7 +43,7 @@ class Lesson2 {
 
 
    public static void main(String[] args) {
-      System.out.println(initials("bванов jван Петрович"));
+      System.out.println(formula(2));
     }
 
 }
