@@ -17,22 +17,33 @@ public class Lesson4_FlowControl {
      * @return самую длинную строку из полученного массива
      */
     public static String task1(String[] strings) {
-        int i = strings.length;
-        if (i == 0)
-            {return "";}
-        else{
-             int p = 0;
-             int maxp = 0;
-             int[] u = new int[i];
-             while (p < i) {
-                  u[p]=strings[p].length();
-                  maxp= u[p]>u[maxp] ?  p : maxp;
-                  /*  if(u[p]>u[maxp]){maxp = p;}*/
-                  p++;
-             }
+        /**   int i = strings.length;
+     *   if (i == 0)
+    *        {return "";}
+    *    else{
+   *          int p = 0;
+    *         int maxp = 0;
+    *         int[] u = new int[i];
+    *         while (p < i) {
+    *              u[p]=strings[p].length();
+    *              maxp= u[p]>u[maxp] ?  p : maxp;
+    *               if(u[p]>u[maxp]){maxp = p;}
+    *              p++;
+    *         }
+    *
+    *     return strings[maxp];}
+    **/
 
-         return strings[maxp];}
-    }
+        String smax = "";
+        for (String p : strings) {
+            smax = p.length() > smax.length() ? p : smax;
+        }
+        return  smax;}
+
+
+
+
+
 
     /**
      * В рамках задания необходимо реализовать микро-калькулятор.
@@ -68,9 +79,11 @@ public class Lesson4_FlowControl {
            i=i%k;
            break;
        case '/':
-           if (k == 0 | i ==0 ){ i = 0;}
-           else{i=i/k;}
-           break;
+           i = k==0 || i ==0 ? 0 : i/k;
+        //   if (k == 0 || i ==0 )
+        //   { return 0;}
+        //   else{i=i/k;}
+          break;
         default:
             i=0; }
             return i;
@@ -106,7 +119,7 @@ public class Lesson4_FlowControl {
 
 
     public static void main(String[] args) {
-        System.out.println(task1(new String[0]));
+        System.out.println(task1(new String[]{}));
     }
 
 }
