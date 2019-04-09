@@ -8,12 +8,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.lang.reflect.Method;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import ru.java.courses.sport.Athlete;
-import ru.java.courses.sport.Coach;
-import ru.java.courses.sport.team.Team;
-import ru.java.courses.sport.team.football.FootballPlayer;
-import ru.java.courses.sport.team.football.FootballTeam;
-import ru.java.courses.sport.team.football.PlayerRole;
+import ru.java.courses.sport1.Athlete;
+import ru.java.courses.sport1.Coach;
+import ru.java.courses.sport1.team.Team;
+import ru.java.courses.sport1.team.football.FootballPlayer;
+import ru.java.courses.sport1.team.football.FootballTeam;
+import ru.java.courses.sport1.team.football.PlayerRole;
 
 public class Lesson5to8_OOPTest {
 
@@ -30,6 +30,8 @@ public class Lesson5to8_OOPTest {
         FootballPlayer goalkeeper = new FootballPlayer("Алексей Петров", PlayerRole.GOALKEEPER);
         FootballPlayer winger = new FootballPlayer("Сергей Забивалов", PlayerRole.WINGER);
         FootballPlayer defender1 = new FootballPlayer("Николай Башкоймяч", PlayerRole.DEFENDER);
+
+
 
         team.addPlayers(goalkeeper, winger, defender1);
 
